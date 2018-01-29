@@ -1,4 +1,4 @@
-package controller;
+package com.stefanini.appteste.controller;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -8,8 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import entities.*;
-import model.*;
+
+import com.stefanini.appteste.entities.Product;
+import com.stefanini.appteste.model.ProductRestClient;
 
 /**
  * Servlet implementation class ProductController
@@ -17,18 +18,18 @@ import model.*;
 @WebServlet("/product")
 public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
+ /*      
+    *//**
      * @see HttpServlet#HttpServlet()
-     */
+     *//*
     public ProductController() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	*//**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 *//*
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
 		ProductRestClient client = new ProductRestClient();
@@ -58,9 +59,9 @@ public class ProductController extends HttpServlet {
 		}
 	}
 
-	/**
+	*//**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 *//*
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
 		ProductRestClient client = new ProductRestClient();
@@ -98,6 +99,6 @@ public class ProductController extends HttpServlet {
 					.forward(request, response);
 			}
 		}
-	}
+	}*/
 
 }

@@ -1,4 +1,4 @@
-package entities;
+package com.stefanini.appteste.entities;
 
 import java.math.BigDecimal;
 
@@ -6,7 +6,8 @@ import javax.xml.bind.annotation.*;
 
 import java.io.Serializable;
 
-@XmlRootElement(name = "product")
+
+//@XmlRootElement(name = "product")
 public class Product implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -14,7 +15,7 @@ public class Product implements Serializable {
 	private String description;
 	private BigDecimal value;
 	
-	@XmlElement
+	//@XmlElement
 	public int getId() {
 		return id;
 	}
@@ -22,7 +23,7 @@ public class Product implements Serializable {
 		this.id = id;
 	}
 	
-	@XmlElement
+	//@XmlElement
 	public String getName() {
 		return name;
 	}
@@ -30,7 +31,7 @@ public class Product implements Serializable {
 		this.name = name;
 	}
 	
-	@XmlElement
+	//@XmlElement
 	public String getDescription() {
 		return description;
 	}
@@ -38,7 +39,7 @@ public class Product implements Serializable {
 		this.description = description;
 	}
 	
-	@XmlElement
+	//@XmlElement
 	public BigDecimal getValue() {
 		return value;
 	}
