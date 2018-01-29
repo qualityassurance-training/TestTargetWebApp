@@ -28,6 +28,12 @@ public class ProductController_ {
 	@GetMapping("/")
 	public ModelAndView getList(ModelMap model) {
 		
+		Product[] pp = ApiClientRest.get("http://localhost:9999/app/rest/list",Product[].class);
+		
+		for (Product product : pp) {
+			System.out.println(product);
+		}
+		
 		List<Product> l = new ArrayList<>();
 		Product p = new Product();
 		p.setName("Leonardo");
