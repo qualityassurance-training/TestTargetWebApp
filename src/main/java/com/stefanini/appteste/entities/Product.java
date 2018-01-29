@@ -1,10 +1,11 @@
-package entities;
+package com.stefanini.appteste.entities;
 
 import java.math.BigDecimal;
 
 import javax.xml.bind.annotation.*;
 
 import java.io.Serializable;
+
 
 @XmlRootElement(name = "product")
 public class Product implements Serializable {
