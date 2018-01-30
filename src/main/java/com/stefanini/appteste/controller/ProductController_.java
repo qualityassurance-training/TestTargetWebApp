@@ -3,7 +3,7 @@
  */
 package com.stefanini.appteste.controller;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -30,22 +30,18 @@ public class ProductController_ {
 		
 		Product[] pp = ApiClientRest.get("http://localhost:9999/app/rest/list",Product[].class);
 		
-		for (Product product : pp) {
-			System.out.println(product);
-		}
-		
-		List<Product> l = new ArrayList<>();
-		Product p = new Product();
-		p.setName("Leonardo");
-		p.setId(1);
-		l.add(p);
-		l.add(p);
-		l.add(p);
-		l.add(p);
-		l.add(p);
-		l.add(p);
-		model.addAttribute("products",l);
+		List<Product> products = Arrays.asList(pp);
+
+		model.addAttribute("products",products);
 		return new ModelAndView("/product/index",model);
 	}
 	
+	@GetMapping("/add")
+	public String add() {
+		return "/product/add";
+	}
+	@GetMapping("/edit/{id}")
+	public String edit() {
+		return "/product/edit";
+	}
 }
