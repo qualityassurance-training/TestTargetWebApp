@@ -28,7 +28,7 @@ public class ProductController_ {
 	@GetMapping("/")
 	public ModelAndView getList(ModelMap model) {
 		
-		Product[] pp = ApiClientRest.get("http://localhost:8080/app/rest/list",Product[].class);
+		Product[] pp = ApiClientRest.get("http://localhost:8081/app/rest/list",Product[].class);
 		
 		List<Product> products = Arrays.asList(pp);
 
